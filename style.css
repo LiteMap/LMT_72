@@ -1,0 +1,145 @@
+/*** Google font - Poppins ***/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --clr-white:#fff;
+    --clr-primary:#2980b9;
+    --clr-secondary:#8e44ad;
+    --clr-silver:#c0c0c0;
+    --clr-gray:#adadad;
+    --clr-mid-gray:#a6a6a6;
+    --clr-drk-gray:#666;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(120deg,var(--clr-primary) 0%,var(--clr-secondary) 50%,var(--clr-white) 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 400px;
+    background: var(--clr-white);
+    border-radius: 10px;
+}
+
+.container h1{
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid var(--clr-silver);
+}
+
+.container form{
+    padding: 0 40px;
+}
+
+form .text_field{
+    position: relative;
+    border-bottom: 2px solid var(--clr-gray);
+    margin: 30px 0;
+}
+
+.text_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--clr-gray);
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.text_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--clr-primary);
+    transition: 0.5s;
+}
+
+.text_field input:focus ~ label,
+.text_field input:valid ~ label{
+    top: -5px;
+    color: var(--clr-primary);
+}
+
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before{
+    width: 100%;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color: var(--clr-mid-gray);
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+
+input[type='submit']{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: var(--clr-primary);
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--clr-white);
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.5s;
+}
+
+input[type='submit']:active{
+    transform: scale(0.95);
+}
+
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: var(--clr-drk-gray);
+}
+
+.signup_link a{
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
+.signup_link a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
